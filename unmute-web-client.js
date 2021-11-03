@@ -1,7 +1,7 @@
 let socket
 
 window.addEventListener('DOMContentLoaded', () => {
-  socket = io(`http://127.0.0.1:3000`)
+  socket = io()
 
   const queryString = window.location.search,
     urlParams = new URLSearchParams(queryString),
