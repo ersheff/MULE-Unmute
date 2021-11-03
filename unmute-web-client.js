@@ -5,7 +5,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const queryString = window.location.search,
     urlParams = new URLSearchParams(queryString),
-    username = urlParams.get("user")
+    if(urlParams.get("user")) {
+      username = urlParams.get("user")
+    }
 
   socket.on("connect", () => {
     console.log("Ready!")
