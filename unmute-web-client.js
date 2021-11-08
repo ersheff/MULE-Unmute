@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   socket.on("connect", () => {
     console.log("Ready!")
+    console.log(username)
     socket.emit("username", username)
   })
 
