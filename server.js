@@ -8,7 +8,6 @@ app.use(express.static("./"))
 
 
 io.on("connection", socket => {
-  console.log(`New connection from ${socket.id}`)
 
   socket.on("username", username => {
     socket.username = username
@@ -21,7 +20,6 @@ io.on("connection", socket => {
       data: data
     }
     io.emit("data", outgoing)
-    console.log(outgoing)
   })
   
 })
