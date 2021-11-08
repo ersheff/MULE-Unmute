@@ -17,6 +17,6 @@ window.addEventListener('DOMContentLoaded', () => {
 function updateSlider(v) {
   let valueDisplay = document.getElementById("slider-value")
   valueDisplay.innerHTML = v
-  
+  console.log(v)
   socket.emit("data", v)
 }
