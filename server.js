@@ -21,7 +21,7 @@ io.on("connection", socket => {
       data: data
     }
     io.emit("data", outgoing)
-    console.log(data + " emitted")
+    console.log(outgoing)
   })
   
 })
