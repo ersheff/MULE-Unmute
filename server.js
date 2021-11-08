@@ -3,6 +3,7 @@ const express = require("express"),
   server = require("http").createServer(app),
   io = require("socket.io")(server)
 
+app.use("/")
 server.listen(process.env.PORT || 5000), () => console.log(`Listening...`)
 
 io.on("connection", socket => {
