@@ -9,7 +9,7 @@ app.use(express.static("./"))
 
 io.on("connection", socket => {
   console.log(`New connection from ${socket.id}`)
-  /*  
+
   socket.on("username", username => {
     socket.username = username
     console.log(`New connection from ${socket.username}`)
@@ -22,5 +22,5 @@ io.on("connection", socket => {
     }
     io.emit("data", outgoing)
   })
-*/
+  
 })
