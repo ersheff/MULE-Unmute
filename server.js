@@ -1,10 +1,9 @@
 const express = require("express"),
   app = express(),
   server = require("http").createServer(app),
-  io = require("socket.io")(server),
-  port = process.env.port || 3000
+  io = require("socket.io")(server)
 
-server.listen(port, () => console.log(`Listening on port ${port}.`))
+server.listen(process.env.PORT || 5000), () => console.log(`Listening...`)
 
 io.on("connection", socket => {
   console.log(`New connection from ${socket.id}`)
