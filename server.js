@@ -7,7 +7,8 @@ const express = require("express"),
 server.listen(port, () => console.log(`Listening on port ${port}.`))
 
 io.on("connection", socket => {
-  
+  console.log(`New connection from ${socket.id}`)
+  /*  
   socket.on("username", username => {
     socket.username = username
     console.log(`New connection from ${socket.username}`)
@@ -20,5 +21,5 @@ io.on("connection", socket => {
     }
     io.emit("data", outgoing)
   })
-
+*/
 })
