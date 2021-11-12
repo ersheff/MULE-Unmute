@@ -21,5 +21,9 @@ io.on("connection", socket => {
     }
     io.emit("data", outgoing)
   })
+
+  socket.on("per", data => {
+    io.emit("per", data)
+  })
   
 })

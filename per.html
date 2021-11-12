@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="per-style.css">
+    <script src="node_modules/socket.io-client/dist/socket.io.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="per-container">
+        <input type="range" class="per-slider" id="0" 
+        min="0" max="127" value="0" oninput="perFunction(this.id, parseInt(this.value))">
+
+        <input type="range" class="per-slider" id="1" 
+        min="0" max="127" value="0" oninput="perFunction(this.id, parseInt(this.value))">
+
+        <input type="range" class="per-slider" id="2" 
+        min="0" max="127" value="0" oninput="perFunction(this.id, parseInt(this.value))">
+
+        <input type="range" class="per-slider" id="3" 
+        min="0" max="127" value="0" oninput="perFunction(this.id, parseInt(this.value))">
+
+        <label class="container">
+            <input type="checkbox" id="4" onclick="perFunction(this.id, this.checked)">
+            <span class="checkmark"></span>
+        </label>
+        
+        <label class="container">
+            <input type="checkbox" id="5" onclick="perFunction(this.id, this.checked)">
+            <span class="checkmark"></span>
+        </label>
+
+    </div>
+
+    <script src="per-web-client.js"></script>
+</body>
+
+</html>
