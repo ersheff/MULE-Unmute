@@ -15,6 +15,5 @@ window.addEventListener('DOMContentLoaded', () => {
 
 function perFunction(i, v) {
     perArray[i] = v
-    console.log(perArray)
     socket.emit("per", perArray)
 }
