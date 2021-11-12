@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 59.0, 81.0, 640.0, 480.0 ],
+		"rect" : [ 59.0, 81.0, 458.0, 456.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,14 +40,38 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-19",
-					"linecount" : 2,
+					"id" : "obj-34",
+					"linecount" : 5,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 164.0, 245.0, 150.0, 33.0 ],
-					"presentation_linecount" : 2,
-					"text" : "<-- these should update with your phone changes"
+					"patching_rect" : [ 143.0, 328.0, 256.0, 74.0 ],
+					"text" : "on your phone, go to http://mule-unmute.herokuapp.com/per.html\n\nif you haven't connected for a while, it may take up to 30 seconds for the server to spin up"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-26",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 24.0, 161.0, 103.0, 22.0 ],
+					"text" : "dict.unpack array:"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-19",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 164.0, 245.0, 150.0, 47.0 ],
+					"presentation_linecount" : 3,
+					"text" : "<-- these should update with your phone \nslider/toggle changes"
 				}
 
 			}
@@ -127,11 +151,11 @@
 				"box" : 				{
 					"id" : "obj-9",
 					"maxclass" : "newobj",
-					"numinlets" : 7,
-					"numoutlets" : 7,
-					"outlettype" : [ "", "", "", "", "", "", "" ],
-					"patching_rect" : [ 24.0, 191.0, 151.0, 22.0 ],
-					"text" : "route 0 0 0 0 0 0"
+					"numinlets" : 1,
+					"numoutlets" : 6,
+					"outlettype" : [ "int", "int", "int", "int", "int", "int" ],
+					"patching_rect" : [ 24.0, 191.0, 129.0, 22.0 ],
+					"text" : "unpack 0 0 0 0 0 0"
 				}
 
 			}
@@ -225,6 +249,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-26", 0 ],
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-2", 1 ]
 				}
@@ -233,7 +264,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
-					"source" : [ "obj-2", 0 ]
+					"source" : [ "obj-26", 0 ]
 				}
 
 			}
