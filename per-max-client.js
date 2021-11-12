@@ -7,5 +7,5 @@ socket.on("connect", () => {
 })
 
 socket.on("per", incoming => {
-    max.outlet(incoming)
+    max.outlet("per", incoming)
 })

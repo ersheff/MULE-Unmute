@@ -23,6 +23,7 @@ io.on("connection", socket => {
   })
 
   socket.on("per", data => {
+    console.log(data)
     io.emit("per", data)
   })
   
