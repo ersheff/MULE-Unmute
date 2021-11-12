@@ -1,6 +1,6 @@
 const max = require("max-api"),
     io = require("socket.io-client"),
-    socket = io(`https://mule-unmute.herokuapp.com`)
+    socket = io(`https://mule-unmute.herokuapp.com/per.html`)
 
 socket.on("connect", () => {
     max.outlet("connected", 1);
