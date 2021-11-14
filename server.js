@@ -21,5 +21,10 @@ io.on("connection", socket => {
     }
     io.emit("data", outgoing)
   })
+
+  socket.on("per", data => {
+    console.log(data)
+    io.emit("per", data)
+  })
   
 })
