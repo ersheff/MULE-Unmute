@@ -8,7 +8,7 @@ let parentDiv = document.getElementById("p5-container"),
 
 function setup() {
   createCanvas(w, h).parent("p5-container")
-  textSize(10)
+  textSize(12)
 }
 
 function draw() {
@@ -22,13 +22,18 @@ function draw() {
     sX = int(x/w*128)
     sY = int(y/h*128)
   }
-  text(sX + ", " + sY, 10, 20)
-  let v = [sX, sY]
-  socket.emit("data", v)
+  text(sX + ", " + sY, 6, 12)
 }
 
 function windowResized() {
   w = parentDiv.clientWidth
   h = parentDiv.clientHeight
   resizeCanvas(w, h)
+}
+
+setInterval(sendXY, 80)
+
+function sendXY() {
+  let v = [sX, sY]
+  socket.emit("data", v)
 }
