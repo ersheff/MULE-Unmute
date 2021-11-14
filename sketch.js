@@ -16,8 +16,8 @@ function draw() {
   x = mouseX
   y = mouseY
   fill(255, 100, 100)
-  circle(x, y, w*0.15)
-  fill(150)
+  circle(x, y, w*0.2)
+  fill(100)
   if(x >= 0 && x <= w && y >= 0 && y <= h) {
     sX = int(x/w*128)
     sY = int(y/h*128)
@@ -29,9 +29,4 @@ function windowResized() {
   w = parentDiv.clientWidth
   h = parentDiv.clientHeight
   resizeCanvas(w, h)
-}
-
-function touchMoved() {
-  ellipse(mouseX, mouseY, 5, 5);
-  return false;
 }
