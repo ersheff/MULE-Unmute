@@ -23,6 +23,8 @@ function draw() {
     sY = int(y/h*128)
   }
   text(sX + ", " + sY, 10, 56)
+  let v = [sX, sY]
+  socket.emit("data", v)
 }
 
 function windowResized() {
