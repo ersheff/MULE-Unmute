@@ -16,13 +16,13 @@ canvas {
   font-weight: bold;
   align-items: center;
   justify-content: center;
-  height: 20vh;
+  height: 16vh;
 }
 
 #main-container {
   display: flex;
   width: 100vw;
-  height: 80vh;
+  height: 70vh;
   align-items: start;
   justify-content: center;
 }
