@@ -8,7 +8,7 @@ let parentDiv = document.getElementById("p5-container"),
 
 function setup() {
   createCanvas(w, h).parent("p5-container")
-  textSize(24)
+  textSize(36)
 }
 
 function draw() {
@@ -22,7 +22,7 @@ function draw() {
     sX = int(x/w*128)
     sY = int(y/h*128)
   }
-  text(sX + ", " + sY, 10, 20)
+  text(sX + ", " + sY, 10, 40)
 }
 
 function windowResized() {
