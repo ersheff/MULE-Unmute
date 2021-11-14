@@ -8,6 +8,7 @@ let parentDiv = document.getElementById("p5-container"),
 
 function setup() {
   createCanvas(w, h).parent("p5-container")
+  textSize(24)
 }
 
 function draw() {

@@ -12,6 +12,7 @@ canvas {
 #title {
   display: flex;
   color: white;
+  font-size: 2rem;
   font-weight: bold;
   align-items: center;
   justify-content: center;
@@ -21,7 +22,7 @@ canvas {
 #main-container {
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   align-items: start;
   justify-content: center;
 }
