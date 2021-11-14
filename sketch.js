@@ -8,7 +8,7 @@ let parentDiv = document.getElementById("p5-container"),
 
 function setup() {
   createCanvas(w, h).parent("p5-container")
-  textSize(36)
+  textSize(48)
 }
 
 function draw() {
@@ -17,12 +17,12 @@ function draw() {
   y = mouseY
   fill(255, 100, 100)
   circle(x, y, w*0.2)
-  fill(100)
+  fill(50)
   if(x >= 0 && x <= w && y >= 0 && y <= h) {
     sX = int(x/w*128)
     sY = int(y/h*128)
   }
-  text(sX + ", " + sY, 10, 40)
+  text(sX + ", " + sY, 10, 56)
 }
 
 function windowResized() {
