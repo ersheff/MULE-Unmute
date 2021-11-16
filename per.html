@@ -11,18 +11,23 @@
 
 <body>
     <div class="per-container">
+        <div>current cue</div>
         <input type="range" class="per-slider" id="0" 
         min="0" max="127" value="0" oninput="perFunction(this.id, parseInt(this.value))">
 
+        <div>distortion</div>
         <input type="range" class="per-slider" id="1" 
         min="0" max="127" value="0" oninput="perFunction(this.id, parseInt(this.value))">
 
+        <div>electronics</div>
         <input type="range" class="per-slider" id="2" 
         min="0" max="127" value="0" oninput="perFunction(this.id, parseInt(this.value))">
 
+        <div>mains</div>
         <input type="range" class="per-slider" id="3" 
         min="0" max="127" value="0" oninput="perFunction(this.id, parseInt(this.value))">
 
+        <div>record</div>
         <label class="container">
             <input type="checkbox" id="4" onclick="perFunction(this.id, this.checked)">
             <span class="checkmark"></span>
